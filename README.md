@@ -14,7 +14,7 @@
      2. Вторая ступень принимает изображения с первой ступени и увеличивает их разрешение до 112x112, улучшая качество и детализируя изображение. Реализацию модели и трейнлупа можно увидеть в SRGAN.py и SRGANTrainloop.py.
 
 3. **Графики и примеры**:
-   - Для каждого этапа обучения были собраны графики потерь (loss), показывающие прогресс модели, а также примеры изображений, сгенерированных на различных этапах обучения.
+   - Для каждого этапа обучения были собраны графики потерь (loss), показывающие прогресс модели, а также примеры изображений, сгенерированных на различных этапах обучения. Логирование и мониторинг был произведен через WandB.
 
 ## Шаги, предпринятые в проекте
 
@@ -51,21 +51,21 @@
 
 1. **Простой GAN**:
    - Генерация изображений с разрешением 28x28. Несмотря на обучение, изображения получаются размытыми и слабо похожими на кроссовки.
-   ![Simple GAN Example](path_to_simple_gan_image.png)
+   ![Simple GAN Example](https://github.com/Cowwwperwood/SneakersGAN/blob/main/Simple_Sneak.png)
 
 2. **Двухступенчатый GAN**:
    - Первая ступень генерирует изображения с разрешением 28x28, которые затем увеличиваются во второй ступени до 112x112.
    - Пример сгенерированного изображения до апскейлинга:
-   ![Upscaled Image Example](path_to_downscaled_image.png)
+   ![Upscaled Image Example](https://github.com/Cowwwperwood/SneakersGAN/blob/main/DC_Sneak.png)
    - Пример сгенерированного изображения после апскейлинга:
-   ![Upscaled Image Example](path_to_upscaled_image.png)
+   ![Upscaled Image Example](https://github.com/Cowwwperwood/SneakersGAN/blob/main/SR_Sneak.png)
 
 3. **Графики потерь**:
    - График потерь для DCGAN
-   ![Upscaled Image Example](path_to_gphDC_image.png)
+   ![Upscaled Image Example](https://github.com/Cowwwperwood/SneakersGAN/blob/main/DC_Graphics.png)
 
    - Грифик потерь для SRGAN. Как можно заметить генератор с самых ранних эпох выдает постоянный loss : 0.693(~ln(2)) , что говорит о его неспособности корректно различать правдивые изображения и сгенерированные.
-   ![Upscaled Image Example](path_to_gphSR_image.png)
+   ![Upscaled Image Example](https://github.com/Cowwwperwood/SneakersGAN/blob/main/SR_Graphics.png)
 
 
 
